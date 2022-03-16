@@ -4,8 +4,8 @@
 //
 //  Created by Varun Sidhu on 2022-03-07.
 //
-
-
+ 
+/*
  // BASIC NAVIGATION
 import SwiftUI
 
@@ -36,7 +36,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 // Reference: https://www.youtube.com/watch?v=IopCl8sOyFA&t=358s
  
-/*
+
 
 // DATA PASSING
 import SwiftUI
@@ -87,4 +87,76 @@ struct ContentView_Previews: PreviewProvider {
 // Refrence: https://www.hackingwithswift.com/articles/216/complete-guide-to-navigationview-in-swiftui
  */
  
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            VStack {
+                
+                HStack {
+                    Image(systemName: "info.circle")
+                        .font(.system(size:42, weight: .light))
+                    
+                    Spacer()
+                    
+                    Image("logo")
+                        .frame(height: 28)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "questionmark.circle")
+                        .font(.system(size:42, weight: .light))
+                }
+                
+                Spacer()
+                
+                Image("Image")
+                    .cornerRadius(15)
+                    .frame(width: 300, height: 280)
+                
+                Image("Image")
+                    .cornerRadius(15)
+                    .frame(width: 300, height: 280)
+                
+                
+                HStack {
+                    Image(systemName: "xmark.circle")
+                        .font(.system(size:42, weight: .light))
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: ResultView(), label: {
+                            Text("New Trip".uppercased())
+                                .font(.system(.subheadline, design: .rounded))
+                                .fontWeight(.heavy)
+                                .padding(.horizontal, 93)
+                                .padding(.vertical, 12)
+                                .accentColor(Color.green)
+                                .background(
+                                    Capsule().stroke(Color.green, lineWidth: 2)
+                                )
+                        })
+                    
+                    
+                    Spacer()
+                    
+                    Image(systemName: "heart.circle")
+                        .font(.system(size:42, weight: .light))
+                    
+                    
+                }
+            }
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+
+
 
