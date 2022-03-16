@@ -11,7 +11,11 @@ import SwiftUI
 struct Presentation2305App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //DataPassing()
+            //TabBar()
+            //Drawer()
+            //ContentView()
+           MainPage()
         }
     }
 }
